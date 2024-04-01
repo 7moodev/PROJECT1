@@ -7,9 +7,6 @@ import pandas as pd
  
 def parse_args():
     parser = argparse.ArgumentParser(description='CCXT Market Data Downloader')
- 
-   
- 
     parser.add_argument('-s','--symbol',
                         type=str,
                         required=True,
@@ -25,14 +22,11 @@ def parse_args():
                         default='1d',
                         choices=['1m', '5m','15m', '30m','1h', '2h', '3h', '4h', '6h', '12h', '1d', '1M', '1y'],
                         help='The timeframe to download')
- 
- 
     parser.add_argument('--debug',
                             action ='store_true',
                             help=('Print Sizer Debugs'))
  
     return parser.parse_args()
- 
 # Get our arguments
 args = parse_args()
  
